@@ -52,7 +52,10 @@ namespace ОПЗ
                             }
                         case "^":
                             {
-
+                                int summ = (int)Math.Pow(numbers[numbers.Count - 2], numbers[numbers.Count - 1]);
+                                numbers.RemoveAt(numbers.Count - 1);
+                                numbers.RemoveAt(numbers.Count - 1);
+                                numbers.Add(summ);
                                 break;
                             }
                     }

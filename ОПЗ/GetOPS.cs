@@ -82,9 +82,9 @@ namespace ОПЗ
                                         stac.Add(_text[i]);
                                     else
                                     {
-                                        int p = Priority(_text[i]);
-                                        int pleft = Priority(stac[stac.Count - 1]);
-                                        if (pleft >= p)
+                                        int pr = Priority(_text[i]);
+                                        int prLeft = Priority(stac[stac.Count - 1]);
+                                        if (prLeft >= pr)
                                         {
                                             lineofWithDrawal.Add(stac[stac.Count - 1] + " ");
                                             stac.RemoveAt(stac.Count - 1);

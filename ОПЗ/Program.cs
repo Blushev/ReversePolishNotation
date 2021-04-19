@@ -7,9 +7,6 @@ namespace ОПЗ
 {
     class Program
     {
-        static List<string> massiveOfLine = new List<string>();
-        static List<string> numbers = new List<string>();
-        static List<string> chars = new List<string>();
         static string path = "input.txt";
         static string[] line;
         static string[] example;
@@ -17,7 +14,7 @@ namespace ОПЗ
         public static void GetExampleFromText(string path)
         {
             line = File.ReadAllLines(path);
-            example = line[0].Split(" "); //line[0] отвечает именно за первую строку нашего блокнота!
+            example = line[0].Split(" "); 
         }
 
         static void Main(string[] args)
@@ -25,11 +22,11 @@ namespace ОПЗ
             GetExampleFromText(path);
             GetOPS deductionOfExample = new GetOPS();
             string reversePolishNotation = deductionOfExample.SignAfter(example);
-            string[] virashenie = reversePolishNotation.Split(" ");
+            string[] divideBySpaceExample = reversePolishNotation.Split(" ");
             Console.WriteLine(reversePolishNotation);
 
-            CountSumm gg = new CountSumm();         
-            Console.WriteLine(gg.GetSumm(virashenie));
+            CountSumm countSumm = new CountSumm();         
+            Console.WriteLine(countSumm.GetSumm(divideBySpaceExample));
             Console.ReadKey();
         }
     }
